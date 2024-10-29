@@ -1,0 +1,7 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "function-paren-newline": ["error", "never"],
+    "function-call-argument-newline": ["error", "never"]
+  }
+}

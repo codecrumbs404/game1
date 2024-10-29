@@ -1,0 +1,161 @@
+html {
+    transition:
+        filter 1.5s cubic-bezier(0.65, 0.05, 0.36, 1),
+        background-color 1.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: filter;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #0f0f0f;
+    color: white;
+    max-width: 600px; /* Fixed max-width for larger screens */
+    margin: 0 auto; /* Center the container */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1 {
+    color: white; /* Change heading color to white */
+    font-size: 1.6em;
+    font-weight: normal;
+    line-height: 1.25em;
+    margin-bottom: 16px;
+}
+
+#main-message {
+    position: relative;
+    top: 72px;
+    color: white; /* Set text color to white */
+    background-color: transparent; /* Transparent background */
+}
+
+.inverted {
+    filter: invert(100%);
+    background-color: transparent;
+}
+
+.interstitial-wrapper {
+    font-size: 1em;
+    line-height: 1.55;
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    color: white; /* Set text color to white */
+    background-color: transparent; /* Transparent background */
+}
+
+.runner-container {
+    height: 150px;
+    max-width: 600px;
+    overflow: hidden;
+    position: absolute;
+    top: 35px;
+    width: 100%;
+    background-color: transparent; /* Transparent background */
+}
+
+.runner-canvas {
+    max-width: 650px;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    background-color: transparent; /* Transparent background */
+}
+
+#offline-resources {
+    display: none;
+}
+
+.arcade-mode .interstitial-wrapper {
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.arcade-mode,
+.arcade-mode .runner-container,
+.arcade-mode .runner-canvas {
+    image-rendering: pixelated;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.arcade-mode .runner-container {
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform-origin: top center;
+    transition: transform 250ms cubic-bezier(0.4, 0, 1, 1) 0.4s;
+    z-index: 2;
+    background-color: transparent; /* Transparent background */
+}
+
+kbd {
+    background-color: #000; /* This can remain as is, or you can change it to white */
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    min-width: 1em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.slow-speed-option {
+    align-items: center;
+    background: var(--google-gray-50);
+    border-radius: 24px/50%;
+    bottom: 0;
+    color: white; /* Set text color to white */
+    display: inline-flex;
+    font-size: 1em;
+    left: 0;
+    line-height: 1.1em;
+    margin: 5px auto;
+    padding: 2px 12px 3px 20px;
+    position: absolute;
+    right: 0;
+    width: max-content;
+    z-index: 999;
+}
+
+.slow-speed-option [type="checkbox"] {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.slow-speed-option .slow-speed-toggle {
+    cursor: pointer;
+    margin-inline-start: 8px;
+    padding: 8px 4px;
+    position: relative;
+}
+
+.slow-speed-option .slow-speed-toggle::before {
+    background: rgb(189, 193, 198);
+    border-radius: 0.65em;
+    height: 0.9em;
+    width: 2em;
+}
+
+.slow-speed-option .slow-speed-toggle::after {
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 40%);
+    height: 1.2em;
+    position: absolute;
+    top: 51%;
+    transform: translate(-20%, -50%);
+    width: 1.1em;
+}
