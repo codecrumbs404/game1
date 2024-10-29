@@ -25,7 +25,7 @@ export default function Home() {
       <div id="main-frame-error" className="interstitial-wrapper">
         <div id="main-message">
           <h1>
-            <span>Click to play</span>
+            <span>Click  to play</span>
           </h1>
           <ul>
             <li>
